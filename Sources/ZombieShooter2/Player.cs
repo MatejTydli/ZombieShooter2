@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace ZombieShooter2
@@ -48,8 +47,7 @@ namespace ZombieShooter2
 		{
 			Image rotatedImage = this.Hitbox.Image;
 
-			bool newFacingRight = mousePos.X < this.Hitbox.Left + this.Hitbox.Width / 2 && Game.gameState == GameState.Running 
-				? false : true;
+			bool newFacingRight = mousePos.X < this.Hitbox.Left + this.Hitbox.Width / 2 && Game.gameState == GameState.Running ? false : true;
 			if (newFacingRight != this.FacingRight)
 			{
 				rotatedImage.RotateFlip(RotateFlipType.Rotate180FlipY);

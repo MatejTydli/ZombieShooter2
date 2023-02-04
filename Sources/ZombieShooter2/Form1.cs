@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using myUtilities;
+using Utils.Windows.Forms;
 using static System.Windows.Forms.SystemInformation;
 
 namespace ZombieShooter2
