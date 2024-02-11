@@ -5,17 +5,17 @@ namespace ZombieShooter2
 {
 	static class Media
 	{
-		internal static Image pauseImage { get; private set; }
-		internal static Image ammoImage { get; private set; }
-		internal static Image coinsImage { get; private set; }
-		internal static Image bulletImage { get; private set; }
-		internal static Image shopImage { get; private set; }
-		internal static Image enemyImage { get; private set; }
-		internal static Image playerImage { get; private set; }
-		internal static Image healImage { get; private set; }
-		internal static SoundPlayer shootSound { get; private set; }
+		public static Image pauseImage { get; private set; }
+		public static Image ammoImage { get; private set; }
+		public static Image coinsImage { get; private set; }
+		public static Image bulletImage { get; private set; }
+		public static Image shopImage { get; private set; }
+		public static Image enemyImage { get; private set; }
+		public static Image playerImage { get; private set; }
+		public static Image healImage { get; private set; }
+		public static SoundPlayer shootSound { get; private set; }
 
-		internal static void Initialize()
+		public static void Initialize()
 		{
 			pauseImage = Image.FromFile(@".\Media\pause.png");
 			ammoImage = Image.FromFile(@".\Media\ammo.png");

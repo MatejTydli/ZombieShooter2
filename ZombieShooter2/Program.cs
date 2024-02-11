@@ -5,7 +5,7 @@ namespace ZombieShooter2
 {
 	static class Program
 	{
-		internal static Form1 mainForm;
+		public static Form1 mainForm;
 
 		[STAThread]
 		static void Main()

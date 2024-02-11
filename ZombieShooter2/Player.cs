@@ -5,10 +5,10 @@ namespace ZombieShooter2
 {
 	class Player : GameObject
 	{
-		internal int healt;
-		internal bool GoLeft, GoRight, Jumping, CollidingOnTop, CanShoot, FacingRight;
+		public int healt;
+		public bool GoLeft, GoRight, Jumping, CollidingOnTop, CanShoot, FacingRight;
 
-		internal Player(PictureBox hitbox) : base(hitbox)
+		public Player(PictureBox hitbox) : base(hitbox)
 		{
 			this.GoLeft = false;
 			this.GoRight = false;
@@ -19,7 +19,7 @@ namespace ZombieShooter2
 			this.healt = 100;
 		}
 
-		internal void Shoot(Point targetPoint)
+		public void Shoot(Point targetPoint)
 		{
 			if (!this.CanShoot || Game.ammo < 1) return;
 
@@ -43,7 +43,7 @@ namespace ZombieShooter2
 			this.CanShoot = false;
 		}
 
-		internal void SetFacing(Point mousePos)
+		public void SetFacing(Point mousePos)
 		{
 			Image rotatedImage = this.Hitbox.Image;
 

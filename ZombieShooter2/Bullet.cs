@@ -6,11 +6,11 @@ namespace ZombieShooter2
 {
 	class Bullet : GameObject
 	{
-		internal Point TargetPoint { get; private set; }
-		internal Utils.Math.Speed2 Speed { get; private set; }
-		internal object Tag { get; private set; }
+		public Point TargetPoint { get; private set; }
+		public Utils.Math.Speed2 Speed { get; private set; }
+		public object Tag { get; private set; }
 
-		internal Bullet(Point TargetPoint, PictureBox Hitbox) : base(Hitbox)
+		public Bullet(Point TargetPoint, PictureBox Hitbox) : base(Hitbox)
 		{
 			this.TargetPoint = TargetPoint;
 			this.Speed = Utils.Math.SpeedBetween2Points(20, this.Hitbox.Location, this.TargetPoint);

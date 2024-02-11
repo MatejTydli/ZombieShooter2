@@ -9,17 +9,17 @@ namespace ZombieShooter2
 {
 	class Form1 : Form
 	{
-		internal FormPage menuPage, optionsPage, gamePage, shopPage, gameOverPage;
-		internal Label
+		public FormPage menuPage, optionsPage, gamePage, shopPage, gameOverPage;
+		public Label
 		menuTitleLabel, menuStartLabel, menuOptionsLabel, menuExitLabel,
 		optionsTitleLabel, optionsBackLabel, optionsSoundLabel, optionsExitLabel,
 		shopTitleLabel, shopBackLabel, gameOverTitleLabel, gameOverBackLabel, gameOverWavesLabel,
 		ammoLabel, coinsLabel, wavesLabel;
-		internal PictureBox
+		public PictureBox
 		gamePausePictureBox, gameShopPictureBox, ammoPictureBox, coinsPictureBox, shopAmmoPictureBox, shopHealPictureBox,
 		gamePlatform_Floor, gamePlatform_1, gamePlatform_2, gamePlatform_3, gamePlatform_4;
-		internal Button shopAmmoBuyButton, shopHealBuyButton;
-		internal ProgressBar healtBar;
+		public Button shopAmmoBuyButton, shopHealBuyButton;
+		public ProgressBar healtBar;
 
 		readonly Font font = new Font("Microsoft YaHei UI", 35.00f, FontStyle.Bold);
 		readonly Font fontSmall = new Font("Microsoft YaHei UI", 30.00f, FontStyle.Regular);
@@ -30,7 +30,7 @@ namespace ZombieShooter2
 			this.ResumeLayout(false);
 		}
 
-		internal Form1()
+		public Form1()
 		{
 			InitializeComponent();
 			InitializeMenuPage();

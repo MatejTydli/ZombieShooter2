@@ -5,14 +5,14 @@ namespace ZombieShooter2
 {
 	class Enemy : GameObject
 	{
-		internal bool IsInTopCollision;
+		public bool IsInTopCollision;
 
-		internal Enemy(PictureBox hitbox) : base(hitbox)
+		public Enemy(PictureBox hitbox) : base(hitbox)
 		{
 			this.IsInTopCollision = false;
 		}
 
-		internal void MoveXToPlayer(Player player, int speed)
+		public void MoveXToPlayer(Player player, int speed)
 		{
 			int playerXCenter = player.Hitbox.Right - player.Hitbox.Width / 2;
 
@@ -22,7 +22,7 @@ namespace ZombieShooter2
 			else if (playerXCenter > this.Hitbox.Left) this.Move(speed, 0);
 		}
 
-		internal bool AttackPlayer(Player player)
+		public bool AttackPlayer(Player player)
 		{
 			if (this.Hitbox.Bounds.IntersectsWith(player.Hitbox.Bounds))
 			{

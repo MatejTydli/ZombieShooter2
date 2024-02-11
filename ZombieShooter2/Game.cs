@@ -8,11 +8,11 @@ namespace ZombieShooter2
 {
 	static class Game
 	{
-		internal static List<Enemy> enemies;
-		internal static List<Bullet> bullets;
-		internal static Player player;
-		internal static GameState gameState;
-		internal static int ammo, coins;
+		public static List<Enemy> enemies;
+		public static List<Bullet> bullets;
+		public static Player player;
+		public static GameState gameState;
+		public static int ammo, coins;
 
 		static List<Enemy> deadEnemies;
 		static List<Bullet> deadBullets;
@@ -20,7 +20,7 @@ namespace ZombieShooter2
 		static Random random;
 		static int waveCounter, playerForce, enemiesForce;
 
-		internal static void Initialize()
+		public static void Initialize()
 		{
 			gameState = GameState.NotRunning;
 
@@ -48,7 +48,7 @@ namespace ZombieShooter2
 			coins = 0;
 		}
 
-		internal static void RunNew()
+		public static void RunNew()
 		{
 			Initialize();
 
@@ -62,7 +62,7 @@ namespace ZombieShooter2
 			mainForm.healtBar.Value = player.healt;
 		}
 
-		internal static void Pause()
+		public static void Pause()
 		{
 			gameState = GameState.Stopped;
 
@@ -71,7 +71,7 @@ namespace ZombieShooter2
 			enemyAttackTimer.Stop();
 		}
 
-		internal static void Run()
+		public static void Run()
 		{
 			gameState = GameState.Running;
 
@@ -80,7 +80,7 @@ namespace ZombieShooter2
 			enemyAttackTimer.Start();
 		}
 
-		internal static void Quit()
+		public static void Quit()
 		{
 			gameState = GameState.NotRunning;
 
@@ -103,7 +103,7 @@ namespace ZombieShooter2
 			}
 		}
 
-		internal static void GameOver()
+		public static void GameOver()
 		{
 			Quit();
 			mainForm.gameOverWavesLabel.Text = $"Waves survived: {waveCounter}";
@@ -204,7 +204,7 @@ namespace ZombieShooter2
 			}
 		}
 
-		internal static void Input_KeyDown(object sender, KeyEventArgs e)
+		public static void Input_KeyDown(object sender, KeyEventArgs e)
 		{
 			if (gameState == GameState.Running)
 			{
@@ -218,7 +218,7 @@ namespace ZombieShooter2
 			}
 		}
 
-		internal static void Input_KeyUp(object sender, KeyEventArgs e)
+		public static void Input_KeyUp(object sender, KeyEventArgs e)
 		{
 			if (gameState == GameState.Running)
 			{
@@ -227,7 +227,7 @@ namespace ZombieShooter2
 			}
 		}
 
-		internal static void BuyAmmo(object sender, EventArgs e)
+		public static void BuyAmmo(object sender, EventArgs e)
 		{
 			ammo += 20;
 			coins -= 10;
@@ -246,7 +246,7 @@ namespace ZombieShooter2
 			}
 		}
 
-		internal static void BuyHeal(object sender, EventArgs e)
+		public static void BuyHeal(object sender, EventArgs e)
 		{
 			coins -= 60;
 			if (player.healt >= 50) player.healt = 100;
