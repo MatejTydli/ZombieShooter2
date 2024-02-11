@@ -40,7 +40,8 @@ namespace ZombieShooter2
 			InitializeGameOverPage();
 
 			this.ShowIcon = false;
-			this.WindowState = FormWindowState.Maximized;
+			this.WindowState = FormWindowState.Normal;
+   			this.Size = new Size(1382, 744);
 			this.Name = "Main Form";
 			this.KeyDown += Game.Input_KeyDown;
 			this.KeyUp += Game.Input_KeyUp;
