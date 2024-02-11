@@ -112,6 +112,8 @@ namespace ZombieShooter2
 
 		static void GameTimer_Tick(object sender, EventArgs e)
 		{
+			mainForm.Size = new Size(1382, 744);
+			mainForm.WindowState = FormWindowState.Normal;
 			mainForm.Text = mainForm.gamePage.Text + $" | player: {player.Hitbox.Location} shoot: {player.CanShoot} |" +
 				$" enemies: count: {enemies.Count} | bullets: count {bullets.Count}";
 
